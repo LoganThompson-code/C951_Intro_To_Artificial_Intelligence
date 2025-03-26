@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+  <!-- INTRODUCTION -->
+  <category>
+    <pattern>HELLO</pattern>
+    <template>
+      Hello there! Call me Baymax! I can help you explore computing jobs based on your interests.
+      <br/><br/>Are you ready to begin?
+      
+      <reply>
+          <text>Yes</text>
+          <postback>START</postback>
+      </reply>
+      <reply>
+          <text>No</text>
+          <postback>NOTREADY</postback>
+      </reply>
+    </template>
+  </category>
+
+  <!-- NOT READY -->
+  <category>
+    <pattern>NOTREADY</pattern>
+    <template>
+      That's okay! Take your time and type "Hello" when you're ready to start.
+    </template>
+  </category>
+  
+  <!-- PROMPT SOFTWARE DEVELOPMENT -->
+  <category>
+    <pattern>START</pattern>
+    <template>
+      Great! Let's get started. Do you enjoy coding and building software? <br/>
+      <reply>
+          <text>Yes</text>
+          <postback>SOFT</postback>
+      </reply>
+      <reply>
+          <text>No</text>
+          <postback>NOSOFT</postback>
+      </reply>
+    </template>
+  </category>
+  
+  <!-- AFFIRMATIVE RESPONSE (SOFTWARE DEVELOPER) -->
+  <category>
+    <pattern>SOFT</pattern>
+    <template>
+      Awesome! Based on your interest, a Software Development position might be a great fit for you.
+        <br/>
+        <br/>
+        Learn more about this career on Coursera: <a href="https://www.coursera.org/articles/how-to-become-a-software-developer">Software Developer Career</a>
+        <br/>
+        Type "Hello" to explore other options.
+    </template>
+  </category>
+  
+  <!-- NEGATIVE RESPONSE - PROMPT DATA ANALYSIS -->
+  <category>
+    <pattern>NOSOFT</pattern>
+    <template>
+      That's okay! Do you enjoy working with data to find patterns or insights? <br/>
+      <reply>
+          <text>Yes</text>
+          <postback>DATA</postback>
+      </reply>
+      <reply>
+          <text>No</text>
+          <postback>NODATA</postback>
+      </reply>
+    </template>
+  </category>
+  
+  <!-- AFFIRMATIVE RESPONSE (DATA ANALYST) -->
+  <category>
+    <pattern>DATA</pattern>
+    <template>
+        That's great! You might consider becoming a Data Analyst.
+        <br/>
+        <br/>
+        Learn more about this career on Coursera: <a href="https://www.coursera.org/articles/what-does-a-data-analyst-do-a-career-guide">Data Analyst Career</a>
+        <br/>
+        Type "Hello" to explore other options.
+    </template>
+  </category>
+  
+  <!-- NEGATIVE RESPONSE - PROMPT CYBERSECURITY -->
+  <category>
+    <pattern>NODATA</pattern>
+    <template>
+      Got it. Let's narrow the list down. Are you interested in protecting systems from cyber threats? <br/>
+      <reply>
+          <text>Yes</text>
+          <postback>CYBER</postback>
+      </reply>
+      <reply>
+          <text>No</text>
+          <postback>NOCYBER</postback>
+      </reply>
+    </template>
+  </category>
+  
+  <!-- AFFIRMATIVE RESPONSE (CYBERSECURITY) -->
+  <category>
+    <pattern>CYBER</pattern>
+    <template>
+      Wonderful! A career as a Cybersecurity Analyst might be perfect for you.
+      <br/>
+      <br/>
+        Learn more about this career on Coursera: <a href="https://www.coursera.org/articles/what-is-cyber-security">CyberSecurity Career</a>
+        <br/>
+        Type "Hello" to explore other options.
+    </template>
+  </category>
+  
+  <!-- NEGATIVE RESPONSE - PROMPT UX/UI DESIGN -->
+  <category>
+    <pattern>NOCYBER</pattern>
+    <template>
+      No worries. Do you like designing digital experiences or interfaces? <br/>
+      <reply>
+          <text>Yes</text>
+          <postback>UX</postback>
+      </reply>
+      <reply>
+          <text>No</text>
+          <postback>NOUX</postback>
+      </reply>
+    </template>
+  </category>
+  
+  <!-- AFFIRMATIVE RESPONSE (UX/UI DESIGN) -->
+  <category>
+    <pattern>UX</pattern>
+    <template>
+      Sounds like UX/UI Design could be up your alley.
+      <br/>
+      <br/>
+        Learn more about this career on Coursera: <a href="https://www.coursera.org/articles/ui-vs-ux-design">UI/UX Design Career</a>
+        <br/>
+        Type "Hello" to explore other options.
+    </template>
+  </category>
+  
+  <!-- NEGATIVE RESPONSE - PROMPT SYSTEM ADMIN -->
+  <category>
+    <pattern>NOUX</pattern>
+    <template>
+      Understood. Do you enjoy working with computer systems and networks? <br/>
+      <reply>
+          <text>Yes</text>
+          <postback>SYS</postback>
+      </reply>
+      <reply>
+          <text>No</text>
+          <postback>NOSYS</postback>
+      </reply>
+    </template>
+  </category>
+  
+  <!-- AFFIRMATIVE RESPONSE (SYS ADMIN) -->
+  <category>
+    <pattern>SYS</pattern>
+    <template>
+      Great! You might enjoy being a Systems Administrator.
+      <br/>
+      <br/>
+        Learn more about this career on Coursera: <a href="https://www.coursera.org/articles/what-is-a-system-administrator-a-career-guide">Systems Admin Career</a>
+        <br/>
+        Type "Hello" to explore other options.
+    </template>
+  </category>
+  
+  <!-- NEGATIVE RESPONSE - CONCLUSION AND LOOP -->
+  <category>
+    <pattern>NOSYS</pattern>
+    <template>
+      I'm sorry to hear that. Once you figure out what you're interested in, let me know!
+      <br/>Type "Hello" to begin again.
+    </template>
+  </category>
+
+</aiml>
